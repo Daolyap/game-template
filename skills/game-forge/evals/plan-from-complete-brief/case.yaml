@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: plan-from-complete-brief
+expected_outcome: |
+  Claude writes docs/PLAN.md with a decision log (engine chosen for a browser target, with
+  reasons, covering every DECIDE in the brief: engine, art source respecting "no AI art",
+  audio source), an architecture separating simulation from rendering, milestones starting
+  with a scaffold and a vertical slice each with checks, and risks; writes a CLAUDE.md with
+  test/smoke/screenshot/build commands; writes no game code; asks for approval.
+context:
+  scaffold_script: place-files.sh

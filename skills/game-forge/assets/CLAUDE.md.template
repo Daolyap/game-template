@@ -1,0 +1,35 @@
+# <Title>: agent notes
+
+<Engine and version> game. Primary target: <platform>. <Unit system, e.g. "Units: 1 m = 64 px, kg, s".>
+Design: `docs/GAME_BRIEF.md`. Decisions, architecture, milestones: `docs/PLAN.md`.
+
+## Commands
+- Run: `<command>`
+- Tests (headless, deterministic seed): `<command>`
+- Smoke (drives the real game; needs a display or `xvfb-run -a`): `<command>`
+- Screenshot a scenario: `<command> <scenario> <seconds> out.png`
+- Build: `<command>` → `<output path>`
+
+## Layout
+- `<dir>/`: <what lives here>
+- `docs/`: brief, plan, credits
+
+## Conventions
+- Simulation code never touches rendering or audio, so tests can run it headless.
+- Gameplay randomness uses the seeded generator; cosmetic effects use their own.
+- Tunable numbers live in `<file>` (the tuning panel reads them live).
+- Every asset added gets a line in `docs/CREDITS.md` (source, author, licence).
+
+## Rules that bite
+<!-- Add a line the moment you hit a pitfall. Future sessions read this first. -->
+-
+
+## User preferences
+<!-- Durable taste notes from feedback: what they love, what they hate. -->
+-
+
+## Workflow
+1. Rules and physics changes get a test first; tests must pass.
+2. The smoke test must pass.
+3. Check visuals with a screenshot and look at the PNG.
+4. Feel needs a human: tell the user exactly what to try.

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: flags-gaps-in-brief
+expected_outcome: |
+  Claude checks the brief before building, finds the missing required answers (target
+  platforms, visual style, timeline) and the contradictions (AI art allowed vs. no AI art;
+  12 islands plus online leaderboards in a 10-day solo jam), asks a short grouped set of
+  questions with recommended answers, and does not scaffold or write game code.
+context:
+  scaffold_script: place-files.sh
