@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: kickoff-from-raw-idea
+expected_outcome: |
+  Claude recognises there is no brief yet and starts the Initiate phase instead of coding:
+  it creates docs/GAME_BRIEF.md from the template, pre-fills what the user said (genre and
+  references, lighthouse premise, PC and Steam Deck, dislike of floaty feel) marked as
+  inferred, and hands it over with a short message explaining required sections and DECIDE.
